@@ -1,0 +1,32 @@
+.home
+    padding: 9.6rem 0
+    height: 100vh
+    @include style-flex
+    background-color: $color-silver
+    @include respond(big-tablet)
+        height: auto
+        padding: 9.6rem 0 1rem
+    @include respond(big-phone)
+        padding: 5rem 0 0
+    &__container
+        max-width: 100%
+    &__slide
+        justify-content: space-evenly
+        width: 100%
+        background-color: $color-silver
+        @include respond(tablet)
+            flex-direction: column-reverse
+    &__info
+        max-width: 65.7rem
+        @include respond(big-phone)
+            text-align: center
+        @include respond(tablet)
+            max-width: 100%
+    &__btn
+        text-align: center
+        @include respond(big-phone)
+            margin: 3.2rem auto 0
+            width: 100%
+    &__img
+        max-width: 39.1rem
+        width: 100%

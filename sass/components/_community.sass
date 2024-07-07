@@ -1,0 +1,47 @@
+.community
+    padding: 2rem 0
+    &__title
+        max-width: 54.2rem
+    &__items
+        @include style-flex
+        gap: 2rem
+        @include respond(tablet)
+            justify-content: center
+            flex-wrap: wrap
+    &__item
+        max-width: 29.9rem
+        width: 100%
+        text-align: center
+        border-radius: .8rem
+        box-shadow: 0rem .2rem .4rem 0rem rgba(171, 190, 209, 0.20)
+        padding: 2.4rem
+        h3
+            max-width: 24.8rem
+            width: 100%
+            color: $color-gray
+            font-size: $fs-6
+            font-weight: 700
+            line-height: 1.28
+            margin-top: 1.6rem
+        p
+            color: $color-light-gray
+    &__icon
+        position: relative
+        left: -1rem
+        width: 6.5rem
+        height: 5.6rem
+        margin: 0 auto
+        img
+            width: 4.8rem
+            height: 4.8rem
+        &::after
+            content: ""
+            position: absolute
+            top: 55%
+            left: 62%
+            transform: translate(-50%,-50%)
+            width: 5rem
+            height: 4.9rem
+            border-radius: 1.8rem .5rem 1rem .5rem
+            background-color: #E8F5E9  
+            z-index: -1  

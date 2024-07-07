@@ -1,0 +1,38 @@
+.swiper 
+    width: 100%
+    height: 100vh
+    @include respond(big-tablet)
+        height: auto
+        padding-bottom: 5rem
+    &-slide 
+        text-align: center
+        font-size: 18px
+        background-color: $color-silver
+        display: flex
+        justify-content: center
+        align-items: center
+    &-slide 
+        img 
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &-pagination
+        bottom: 1.6rem !important
+    >span+span
+        display: inline-block
+        margin-left: .8rem !important
+
+    &-pagination-bullet
+        height: 1rem
+        width: 1rem
+        background-color: $color-green
+        transition: all .3s ease 0s
+        opacity: .3
+        &:hover
+            opacity: .7
+        &:active
+            opacity: 1
+
+    &-pagination-bullet-active
+        opacity: 1

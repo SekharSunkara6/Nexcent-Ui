@@ -1,0 +1,46 @@
+.customers
+    padding: 3.2rem 0
+    background-color: $color-silver
+    &__container
+        flex-direction: row-reverse
+        gap: 1.5rem
+        @include respond(tab-port)
+            flex-direction: column-reverse
+    &__info
+        margin: 0
+    &__item 
+        max-width: 74rem
+        width: 100%
+    &__text
+        color: $color-text
+        font-size: $fs-2
+        line-height: 1.5
+        margin-top: .8rem
+    &__img
+        max-width: 32.6rem
+        width: 100%
+        overflow: hidden
+        border-radius: .8rem
+        img
+            transform: scale(1.15)
+    &__partner
+        margin-top: 3.2rem
+    &__items
+        flex-shrink: 1
+        max-width: 49.3rem
+        min-width: auto
+        width: 100%
+        justify-content: space-between
+        @include respond(phone)
+            justify-content: center
+            flex-wrap: wrap
+    &__icon
+        pointer-events: none
+    &__wrapper
+        @include style-flex
+        gap: 2rem
+        @include respond(tab-port)
+            flex-direction: column
+    &__btn
+        a
+            white-space: nowrap

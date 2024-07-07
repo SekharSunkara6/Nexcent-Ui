@@ -1,0 +1,84 @@
+.footer
+    background-color: $color-dark-gray
+    padding: 6.4rem 0
+    &__container
+        @include style-flex
+        gap: 3rem
+        @include respond(tablet)
+            flex-direction: column-reverse
+    &__box
+        @include respond(tablet)
+            text-align: center
+        p
+            color: $color-silver
+            margin-top: 4rem
+        >p+p
+            margin-top: .8rem
+    &__social
+        max-width: 17.6rem
+        width: 100%
+        margin-top: 4rem
+        @include respond(tablet)
+            margin: 4rem auto 0
+    &__items
+        @include style-flex
+        align-items: flex-start
+        gap: 3rem
+        max-width: 63.5rem
+        width: 100%
+        @include respond(tablet)
+            flex-direction: column
+    &__item
+        @include style-flex
+        flex-direction: column
+        align-items: flex-start
+        max-width: 16rem
+        width: 100%
+        @include respond(tablet)
+            margin: 0 auto
+            align-items: center
+        h3
+            color: $color-white
+            font-size: $fs-3
+            font-weight: 600
+            line-height: 1.4
+        a
+            color: $color-silver
+            margin-top: 2.4rem
+            transition: all .3s ease 0s
+            &:hover
+                color: $color-green
+            &:active
+                color: $color-silver
+        >a+a
+            margin-top: 1.2rem
+    &__form
+        margin-top: 2.4rem
+        position: relative
+        input
+            color: $color-gray-white
+            width: 100%
+            border-radius: .8rem
+            background-color: $color-gray
+            padding: 1rem 3.5rem 1rem 1.2rem
+            transition: all .3s ease 0s
+            &::placeholder
+                color: $color-gray-white
+            &:focus
+                box-shadow: 0 0 .5rem .3rem $color-green
+        button
+            position: absolute
+            top: 50%
+            right: 1.2rem
+            transform: translateY(-50%)
+    &__form-icon
+        img
+            transition: all .3s ease 0s
+        &:hover
+            img
+                transform: scale(1.2)
+        &:active
+            img
+                transform: scale(1)
+    &__submit
+        max-width: 25.5rem

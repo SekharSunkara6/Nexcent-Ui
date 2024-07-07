@@ -1,0 +1,51 @@
+.ticker
+    max-width: 100%
+    margin: auto
+    &__wrapper 
+        position: relative
+        display: flex
+        overflow: hidden
+        user-select: none
+        gap: 20px
+    &__wrapper:before,
+    &__wrapper:after 
+        content: ""
+        height: 100%
+        top: 0
+        width: 10%
+        position: absolute
+        z-index: 1
+        pointer-events: none
+    &__wrapper:before 
+        left: 0
+        background: linear-gradient(90deg,$color-white 0%,rgba(255, 255, 255, 0) 100%)
+    &__wrapper:after 
+        right: 0
+        background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%,$color-white 100%)
+    &__items 
+        flex-shrink: 0
+        display: flex
+        gap: 20px
+        counter-reset: item
+        justify-content: space-around
+        min-width: 100%
+    &__item 
+        flex: 0 0 auto
+        counter-increment: item
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.1s ease-in-out
+    &__marquee 
+        animation: scroll 20s linear infinite
+    &__reverce 
+        animation-direction: reverse
+
+@keyframes scroll 
+    from 
+        transform: translateX(0)
+    to 
+        transform: translateX(calc(-100% - 20px))
+
+
+

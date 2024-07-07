@@ -1,0 +1,41 @@
+.marketing
+    padding: 4.8rem 0 9.4rem
+    &__title
+        p
+            max-width: 62.8rem
+    &__items
+        @include style-flex
+        gap: 1rem
+        align-items: flex-start
+        @include respond(tab-port)
+            gap: 3rem
+            justify-content: center
+            flex-wrap: wrap
+    &__item
+        max-width: 36.8rem
+        width: 100%
+    &__img
+        border-radius: .8rem
+    &__info
+        max-width: 89.9%
+        width: 100%
+        border-radius: .8rem
+        background-color: $color-silver
+        box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40)
+        padding: 1.6rem 2.1rem
+        margin: -9rem auto 0
+        position: relative
+        text-align: center
+        @include respond(phone)
+            padding: 1.2rem
+        p
+            color: $color-light-gray
+            font-size: $fs-3
+            font-weight: 600
+            line-height: 1.4
+            @include respond(phone)
+                font-size: $fs-2
+        a
+            margin-top: 2.4rem
+            @include respond(phone)
+                margin-top: 1.2rem

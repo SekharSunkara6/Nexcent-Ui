@@ -1,0 +1,57 @@
+@mixin style-link($color)
+    display: inline-block
+    text-transform: uppercase
+    text-decoration: none
+    color: $color
+
+@mixin style-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
+
+@mixin respond($breakpoint)
+    @if $breakpoint == phone-small
+        @media only screen and (max-width: 320px)
+            @content
+
+    @if $breakpoint == phone-middle
+        @media only screen and (max-width: 400px)
+            @content
+
+    @if $breakpoint == phone
+        @media only screen and (max-width: 479.98px)
+            @content
+    
+    @if $breakpoint == big-phone
+        @media only screen and (max-width: 575px)
+            @content
+
+    @if $breakpoint == tablet
+        @media only screen and (max-width: 767.98px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 991.98px)
+            @content
+    
+    @if $breakpoint == big-tablet
+        @media only screen and (max-width: 1024px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1198.98px)
+            @content
+    
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content

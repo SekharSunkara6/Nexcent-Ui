@@ -1,0 +1,61 @@
+.block
+    @include style-flex
+    &__item
+        text-align: left
+    &__title
+        color: $color-gray
+        font-size: $fs-4
+        font-weight: 600
+        line-height: 1.22
+        @include respond(phone)
+            font-size: $fs-6
+    &__info
+        color: $color-light-gray
+        font-size: $fs-2
+        line-height: 1.5
+        margin-top: 1.6rem
+    &__box
+        color: $color-green
+        font-size: $fs-3
+        font-weight: 600
+        line-height: 1.4
+        margin-top: 3.2rem
+        width: max-content
+
+.section
+    padding-top: 4.8rem
+    padding-bottom: 4.8rem
+    &__container
+        flex-direction: row-reverse
+    &__item
+        max-width: 68.1rem
+    &__img
+        max-width: 44.2rem
+        width: 100%
+
+.social
+    @include style-flex
+    gap: 1.6rem
+    a
+        @include style-flex
+        justify-content: center
+        width: 3.2rem
+        height: 3.2rem
+        border-radius: 50%
+        background-color: $color-gray
+        overflow: hidden
+        transition: all .3s ease 0s
+        img
+            transition: all .3s ease 0s
+        &:hover
+            background-color: $color-green
+            box-shadow: 0 0 .5rem .3rem $color-green
+        &:hover 
+            img
+                transform: scale(1.4)
+        &:active
+            background-color: $color-gray
+            box-shadow: 0 0 .5rem .3rem $color-gray
+        &:active
+            img
+                transform: scale(1)

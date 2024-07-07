@@ -1,0 +1,23 @@
+.pixelgrade
+    padding-top: 2.2rem
+    &__container
+        @include respond(tablet)
+            flex-direction: column-reverse
+            gap: 2rem
+    &__item
+        @include respond(tablet)
+            max-width: 100%
+    &__title
+        max-width: 62rem
+    &__img
+        img
+            max-width: max-content
+            width: max-content
+            @include respond(big-phone)
+                max-width: 100%
+                width: 100%
+    &__btn
+        @include respond(big-phone)
+            text-align: center
+            width: 100%
+        
